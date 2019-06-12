@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t idks/docker-frontend -f Docerfile.dev .
+  - docker build -t idks/docker-frontend -f Dockerfile.dev .
 
 script:
   - docker run idks/docker-frontend npm run test -- --coverage
