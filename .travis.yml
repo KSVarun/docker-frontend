@@ -6,4 +6,4 @@ before_install:
   - docker build -t idks/docker-frontend -f Dockerfile.dev .
 
 script:
-  - docker run idks/docker-frontend npm run test -- --coverage
+  - docker run -e CI=true idks/docker-frontend npm run test
